@@ -16,19 +16,20 @@ class _SignUpState extends State<SignUp> {
         backgroundColor: Colors.brown[100],
         appBar: AppBar(),
         body: Container(
+          padding: const EdgeInsets.symmetric(
+              vertical: 20, horizontal: 50.0),
           child: MaterialButton(
-              child: Text("Sign in Annoysmously"),
-              onPressed: (() async {
-                dynamic result = await _auth.signInAnon();
-                if (result == null) {
-                  print("Error Sign In");
-                } else {
-                  print("success Fully SignIn");
-                  print(result);
-                }
-              }),
-              padding: const EdgeInsets.symmetric(
-                  vertical: 20, horizontal: 50.0)),
+            child: const Text("Sign in Annoysmously"),
+            onPressed: (() async {
+              dynamic result = await _auth.signInAnon();
+              if (result == null) {
+                print("Error Sign In");
+              } else {
+                print("success Fully SignIn");
+                print(result.uid);
+              }
+            }),
+          ),
         ));
   }
 }
