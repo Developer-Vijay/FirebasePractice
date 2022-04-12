@@ -1,6 +1,7 @@
 # firebase_practice
 
 A new Flutter project.
+This is Learning projedct in this  I am learning the firebase methods and database
 
 ## Getting Started
 
